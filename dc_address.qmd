@@ -11,7 +11,7 @@ format:
     self-contained: true
 ---
 
-A project to explore how addresses in Washington D.C. are characterized due to the unique street naming conventions. Several streets in Washington are named after the various U.S. states. Additionally, downtown Washington has a very intuitive and structured grid system, with east-west streets being assigned a letter, and north-south streets assigned a number, both corresponding to how far they are from the Capitol. I have called these Standard Named Streets (SNS).
+A project to explore how addresses in Washington D.C. are characterized due to the unique street naming conventions. Several streets in Washington are named after the various U.S. states. Additionally, downtown Washington has a very intuitive and structured grid system, with east-west streets being assigned a letter, and north-south streets assigned a number, both corresponding to how far they are from the Capitol. I have called these Standard Named Streets (SNS). We shall see where this goes.
 
 ```{r}
 #| label: setup 
