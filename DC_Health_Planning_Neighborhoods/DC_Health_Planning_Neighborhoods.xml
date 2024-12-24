@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <pubdate>20200508</pubdate>
+                <title>Health Planning Neighborhood</title>
+                <geoform>vector digital data</geoform>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>This dataset contains polygons that represent the boundaries of statistical neighborhoods as defined by the DC Department of Health (DC Health). DC Health delineates statistical neighborhoods to facilitate small-area analyses and visualization of health, economic, social, and other indicators to display and uncover disparate outcomes among populations across the city. The neighborhoods are also used to determine eligibility for some health services programs and support research by various entities within and outside of government. DC Health Planning Neighborhood boundaries follow census tract 2010 lines defined by the US Census Bureau. Each neighborhood is a group of between one and seven different, contiguous census tracts. This allows for easier comparison to Census data and calculation of rates per population (including estimates from the American Community Survey and Annual Population Estimates). These do not reflect precise neighborhood locations and do not necessarily include all commonly-used neighborhood designations. There is no formal set of standards that describes which neighborhoods are included in this dataset. Note that the District of Columbia does not have official neighborhood boundaries. Origin of boundaries: each neighborhood is a group of between one and seven different, contiguous census tracts. They were originally determined in 2015 as part of an analytical research project with technical assistance from the Centers for Disease Control and Prevention (CDC) and the Council for State and Territorial Epidemiologists (CSTE) to define small area estimates of life expectancy. Census tracts were grouped roughly following the Office of Planning Neighborhood Cluster boundaries, where possible, and were made just large enough to achieve standard errors of less than 2 for each neighborhood's calculation of life expectancy. The resulting neighborhoods were used in the DC Health Equity Report (2018) with updated names. HPNs were modified slightly in 2019, incorporating one census tract that was consistently suppressed due to low numbers into a neighboring HPN (Lincoln Park incorporated into Capitol Hill). Demographic information were analyzed to identify the bordering group with the most similarities to the single census tract. A second change split a neighborhood (GWU/National Mall) into two to facilitate separate analysis.</abstract>
+            <purpose>This dataset is used by DC Health, partners, and researchers to facilitate analysis and statistical modeling on a variety of health, economic, social, and other topics. DC Health delineates statistical neighborhoods to facilitate small-area analyses and visualization of health, economic, social, and other indicators to display and uncover disparate outcomes among populations across the city.</purpose>
+            <supplinf>DC Health Planning Neighborhoods are not analogous to Neighborhood Cluster boundaries created by the DC Office of Planning, which are used for planning purposes and political analyses. They should not be confused with the cluster layer or considered to be interchangeable in any way. Origin of boundaries: each neighborhood is a group of between one and seven different, contiguous census tracts. They were originally determined in 2015 as part of an analytical research project with technical assistance from the Centers for Disease Control and Prevention (CDC) and the Council for State and Territorial Epidemiologists (CSTE) to define small area estimates of life expectancy. Census tracts were grouped roughly following the Office of Planning Neighborhood Cluster boundaries, where possible, and were made just large enough to achieve standard errors of less than 2 for each neighborhood's calculation of life expectancy. The resulting neighborhoods were used in the DC Health Equity Report (2018) with updated names. HPNs were modified slightly in 2019, incorporating one census tract that was consistently suppressed due to low numbers into a neighboring HPN (Lincoln Park incorporated into Capitol Hill). Demographic information were analyzed to identify the bordering group with the most similarities to the single census tract. A second change split a neighborhood (GWU/National Mall) into two to facilitate separate analysis.</supplinf>
+        </descript>
+        <status>
+            <update>As needed</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-77.119759</westbc>
+                <eastbc>-76.909393</eastbc>
+                <northbc>38.995548</northbc>
+                <southbc>38.791645</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>CDC</themekey>
+                <themekey>Centers for Disease Control and Prevention</themekey>
+                <themekey>Council for State and Territorial Epidemiologists</themekey>
+                <themekey>CSTE</themekey>
+                <themekey>dc</themekey>
+                <themekey>dc health</themekey>
+                <themekey>disease</themekey>
+                <themekey>district of columbia</themekey>
+                <themekey>doh</themekey>
+                <themekey>epidemiology</themekey>
+                <themekey>health</themekey>
+                <themekey>neighborhood</themekey>
+                <themekey>washington dc</themekey>
+            </theme>
+        </keywords>
+        <accconst>Other Constraints</accconst>
+        <useconst>None</useconst>
+        <datacred>https://dchealth.dc.gov</datacred>
+        <native>Esri ArcGIS 12.5.0.22081</native>
+    </idinfo>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>GT-polygon composed of chains</sdtstype>
+                <ptvctcnt>51</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>Health_Planning_Neighborhood</enttypl>
+            </enttyp>
+            <attr>
+                <attrlabl>OBJECTID_1</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Shape</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Shape_Leng</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>Shape_Length</attrlabl>
+                <attrdef>Length of feature in internal units.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Positive real numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Shape_Area</attrlabl>
+                <attrdef>Area of feature in internal units squared.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Positive real numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>DC_HPN_NAME</attrlabl>
+                <attrdef>DC Health Planning Neighborhood Name</attrdef>
+                <attrdefs>DC Health</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>CODE</attrlabl>
+                <attrdef>DC Health Planning Neighborhood Code</attrdef>
+                <attrdefs>DC Health</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>NAME</attrlabl>
+                <attrdef>Label with code and name</attrdef>
+                <attrdefs>DC Health</attrdefs>
+            </attr>
+        </detailed>
+    </eainfo>
+    <metainfo>
+        <metd>20220615</metd>
+        <metc>
+            <cntinfo>
+                <!--no contact person or organization name available-->
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>

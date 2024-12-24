@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20030101</pubdate>
+                <title>Address Points</title>
+                <geoform>tabular digital data</geoform>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>The dataset contains locations and attributes of address points, created as part of the Master Address Repository (MAR) for the Office of the Chief Technology Officer (OCTO) and Department of Buildings (DOB). It contains the addresses in the District of Columbia which are typically placed on the buildings. Visit opendata.dc.gov/pages/addressing-in-dc#documentation for more information on the MAR.</abstract>
+            <purpose>Location of street addresses in the District of Columbia.</purpose>
+        </descript>
+        <status>
+            <progress>Complete</progress>
+            <update>Daily</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-77.13</westbc>
+                <eastbc>-76.90</eastbc>
+                <northbc>39.01</northbc>
+                <southbc>38.78</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>master address repository</themekey>
+                <themekey>location</themekey>
+            </theme>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>location</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>District of Columbia</placekey>
+                <placekey>Washington DC</placekey>
+            </place>
+        </keywords>
+        <accconst>Other Constraints</accconst>
+        <useconst>This work is licensed under a Creative Commons Attribution 4.0 International License.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Department of Buildings</cntorg>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>1100 4th Street SW</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20024</postal>
+                </cntaddr>
+                <cntvoice>(202) 671-3500</cntvoice>
+            </cntinfo>
+        </ptcontac>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <datacred>Office of the Chief Technology Officer</datacred>
+        <native>Esri ArcGIS 13.0.3.36057</native>
+    </idinfo>
+    <dataqual>
+        <lineage>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>E 911 Street File</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>E 911 Street File</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>Property Inventory</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>Property Inventory</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>Owner Points</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>Owner Points</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>Property Owners</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>Property Owners</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>New addresses</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>New addresses</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>Street Centerline</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>Street Centerline</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>Health Care Safety Net database</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>Health Care Safety Net database</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>Registered Voters</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>Registered Voters</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>Street File</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>Street File</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>Mayor's Call Center</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>Mayor's Call Center</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>Businesses</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>Businesses</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>Drivers Licenses</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>Drivers Licenses</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>Registered Vehicles</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>Registered Vehicles</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>Mobile Video Addresses</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>Mobile Video Addresses</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>Customer File</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>Customer File</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20040101</pubdate>
+                        <title>MPD Addresses</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>MPD Addresses</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <procstep>
+                <procdesc>To generate the address point feature class, OCTO GIS staff exported the address view from the DC MAR database as a oracle dump file. The address view pulls data from: 1.) DC MAR for address key; 2.) DDOT Street Spatial Database for street information; and 3.) OCTO GIS enterprise geodatabase for square, suffix, and lot (SSL). Staff imported this file into the GIS enterprise geodatabase and created an event theme using the x,y coordinates. The event theme was converted to a feature class. Staff then overlayed the feature class with the following layers: - 2002 ANC - 2002 Ward - Police Service Area - Police District - Police Regional Operations Command - Zip Code - Neighborhood - Neighborhood Cluster - 2002 SMD - Voting Precinct - Census Tract Staff then regenerated the address view to capture SSL values. This information was added to the address point layer.</procdesc>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>Office of the Chief Technology Officer</cntorg>
+                        </cntorgp>
+                        <cntpos>GIS Data Coordinator</cntpos>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntvoice>(202) 727-2277</cntvoice>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>The Address Point Creation and verification Process: ARCBridge Consulting reviewed 15 address databases identified as source material for the MAR. Addresses of each dataset were parsed, validated, and verified against the initial Master Address Table (MAT) created using the OTR database. All unverified and invalid addresses were manually reviewed. Addresses, which were invalid due to missing address components, were further examined in the manual process. The manual review was based on the following information: Street Name, Street Range, Building Polygons, Property Scanned Images, and the Ortho. MAR addresses were also tested against the Mobile data as Mobile addresses were verified by field verification and thus more accurate. The manual review was based on the 1999 planimetric data provided by OCTO, predominantly on buildings and street centerlines. Therefore, accuracy of addresses depended somewhat on the accuracy and currentness of the planimetric data. As a result, manual review was limited by the planimetric data and the owner point X,Y coordinates provided by OCTO. The address points were primarily created from the 'Ownerpoints' database from the DC Office of Tax and Revenue (OTR) given to ARCBridge by DC OCTO. OTR: 172,470 Phase I: The 'Premiseadd' field was parsed to separate the address components. Addresses with the above mentioned components were treated as complete address. Staff checked whether the X,Y values of the complete addresses existed. If a good address didn't have X,Y values, then it was added. Addresses were manually reviewed to check the address location. Addresses, whose street number, name, and location matched, were treated as complete and added to MAR. Phase II: The addresses from the 'Address 2' field were processed, as while reviewing a number of addresses in the 'Address2' field appear correct. Staff checked whether the X,Y values of the complete addresses existed. If a good address didn't have X,Y values, then it was added. Addresses were manually reviewed to check the address location. Addresses, whose street number, name, and location matched, were treated as complete and added to MAR. Phase III: The remaining addresses that either had missing component or didn't appear correct were manually reviewed. Addresses components were then reviewed. For example: If the street type was missing or wrong and all the other components like street name, number, and location were correct, then the street type was added or changed. Staff checked whether the X,Y values of the complete addresses exist or not. If a good address didn't have X,Y values, then it was added. These modified addresses were added to the MAR. Phase IV: The remaining addresses that could not be verified, didn't appear correct, or were ambiguous were moved into the comment table. WASA: 132,868 WASA addresses didn't have X,Y values, therefore the addresses were geocoded to add X,Y coordinates. Phase I: The 'Address' field was parsed to separate the address components. Addresses with the above mentioned components were treated as complete addresses. Staff checked whether X,Y values of the complete addresses existed. If any good address didn't have XY values then it was added. Addresses were manually reviewed to check the address location. Addresses, whose street number, name &amp; location matched, were treated as good and complete and added to MAR. Phase II. The remaining addresses that either had a missing component or didn't appear correct were manually reviewed. Addresses components were then reviewed. For example: If the street type was missing or wrong and all the other components like street name, number, and location were correct, then the street type was added or changed. Staff checked whether X,Y values of the complete addresses existed. If a good address didn't have X,Y values, then it was added. These modified addresses were then added to the MAR. Phase III. Addresses that could not be verified, didn't appear correct, or were ambiguous were moved to the comment table. MPD: 269,350 Phase I: The 'Address' field was parsed to separate the address components. Addresses with the above mentioned components were treated as complete addresses. Staff checked whether the X,Y values of the complete addresses existed. If a good address didn't have XY values, then it was added. Addresses were manually reviewed to check their location. Addresses, whose street number, name, and location matched, were treated as complete and added to MAR. Phase II: The remaining Addresses that either contained a missing component or didn't appear correct were manually reviewed. Addresses components were then reviewed. For example: If the street type was missing or wrong and all the other components like street name, number, and location were correct, then the street type was added or changed. Staff checked whether the X,Y values of the complete addresses existed. If a good address didn't have X,Y values, then it was added. These modified addresses were added to the MAR. Phase III: Addresses that couldn't be verified, didn't appear correct, or were ambiguous were moved to the comment table. Numerous MPD addresses were moved to the comments table as most of them appeared theoretical, such as a full address with no associated building. OTR- Mobile Video data: 156,527 Mobile addresses were created and verified at the physical location of the address, thus strengthening the validity of the attribution. Most other source information was generated and verified using manual in-house procedures. Mobile Video addresses were manually reviewed to check the address locations. Addresses, whose street number, name, and location matched, were treated as valid. The remaining addresses were moved to the comments table. Addresses with comments were manually reviewed. Addresses components were reviewed, for example: If type was missing or wrong and all the other components like street name, number &amp; location were correct then type was added/changed. These modified correct addresses were moved out of the Comment table and added to the valid Mobile Video address table. Many of the same procedures were run on the remaining source datasets: DMV - Registered Vehicles - 53,507 DMV - Drivers License: - 140,595 D&amp;B - Business: - 38,625 MCC - EMA - 195,857 MPD - Street File - 128,699 OTR- Property Owners - 129,800 OTR- Property Inventory - 161,408 BOEE- Registered Voters - 318,318 DOH - 201,796 FEMS - E 911 - 142,407 DDOT- Street Centerline - 33,291 DCRA - New Addresses - 151 Total Address Records Reviewed - 2,275,669 Working with Unverified Addresses: Phase I: The full address field of each dataset was parsed to separate the address components using the MDS Tool. Addresses with the all the required components were treated as complete addresses. All addresses validated and verified. All unverified addresses were manually reviewed to create address points. Unverified addresses were geocoded if the dataset did not have X, Y coordinates. Addresses, whose street number, name, and location matched, were treated as complete and added to MAR. Good addresses that the analyst was unable to verify were placed in the comments table. Phase II: Addresses that either had missing components or didn't appear correct were manually reviewed. Addresses components were then reviewed. For example, if the streey type was missing or incorrect and all other components, like street name, number, and location, were correct, then the streey type of the address location type was added or changed. If the street number was missing or incorrect, then the street number range and adjacent building numbers were used to correct or add the street number. If street name was missing or incorrect, then the street name at the address point location was identified and added or modified. If the quad was missing or incorrect, then the quad at the address point location was identified and added or modified. If any address was complete but the address point was at the wrong location, then staff identified the related street name and range from the street centerlines and moved theaddress point to the correct location manually. Then, the moved address points' X,Y values were updated. These modified correct addresses were added to the MAR. Phase III. Staff then completed the comments table. Addresses that couldn't be verified, didn't appear correct, or were ambiguous were moved to the comment table. It contains all of the reject addresses from the 15 source datasets. For more information regarding the construction of the MAR, refer to the "DC Addressing Final Report."</procdesc>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>ARCBridge Consulting and Training, Inc</cntorg>
+                            <cntper>Priti Mathur</cntper>
+                        </cntorgp>
+                        <cntpos>President</cntpos>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>203 Elden Street, Suite#3</address>
+                            <city>Herndon</city>
+                            <state>Virginia</state>
+                            <postal>20170</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntvoice>703-834-6511</cntvoice>
+                        <cntfax>703-834-6514</cntfax>
+                        <cntemail>support@arcbridge.com</cntemail>
+                        <hours>8:00 AM - 6:00 PM M-F</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>On Friday August 18, 2023, the Office of the Chief Technology Officer updated  the Master Address Repository (MAR) datasets, including address points, points of interest, intersections, blocks, and a new data layer named retired address points.
+
+All datasets have been updated to use the MAR 2.0 schema. The most significant change comes with the ADDRESS_ID unique identifier column which will now be named MAR_ID across all five datasets.</procdesc>
+                <procdate>20230818</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>Office of the Chief Technology Officer</cntorg>
+                        </cntorgp>
+                        <cntpos>GIS Data Coordinator</cntpos>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntvoice>(202) 727-2277</cntvoice>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>Entity point</sdtstype>
+                <ptvctcnt>143545</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>DCGIS.ADDRESSES_PT</enttypl>
+                <enttypd>Master Address Repository address points.</enttypd>
+                <enttypds>OCTO</enttypds>
+            </enttyp>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>MAR_ID</attrlabl>
+                <attrdef>Unique MAR Identifier. Primary Key.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>ADDRESS</attrlabl>
+                <attrdef>Concatenation of 
+ADDRESS_NUMBER &amp; 
+ADDRESS_NUMBER_SUFFIX &amp; 
+STREET_NAME &amp;
+STREET_TYPE &amp;
+QUADRANT</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>ADDRESS_NUMBER</attrlabl>
+                <attrdef>Street number.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>ADDRESS_NUMBER_SUFFIX</attrlabl>
+                <attrdef>Street number suffix.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>STREET_NAME</attrlabl>
+                <attrdef>Street type.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>METADATA_ID</attrlabl>
+                <attrdef>Metadata identifier.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SQUARE</attrlabl>
+                <attrdef>Address location property square.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SUFFIX</attrlabl>
+                <attrdef>Address location property square suffix.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>LOT</attrlabl>
+                <attrdef>Address location property lot.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>STATUS</attrlabl>
+                <attrdef>Lifecycle status of an address.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>ACTIVE</edomv>
+                                                						
+                        
+                        <edomvd>Addresses for buildings which are standing. The overwhelming majority of addresses have the 'ACTIVE' status.</edomvd>
+                                                						
+                        
+                        <edomvds>OCTO</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>RECOMMENDED</edomv>
+                                                						
+                        
+                        <edomvd>Addresses which have been recommended (suggested) by a DC GIS employee for approval by DOB.</edomvd>
+                                                						
+                        
+                        <edomvds>OCTO</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>ASSIGNED</edomv>
+                                                						
+                        
+                        <edomvd>Addresses which have been assigned (approved) by DOB, but whose buildings have not yet been constructed.</edomvd>
+                                                						
+                        
+                        <edomvds>OCTO</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>RETIRE</edomv>
+                                                						
+                        
+                        <edomvd>Addresses for buildings that have been demolished or for addresses which represented space which has since been occupied by a different address (example: a retail store closing and being taken over by a neighboring store which knocks the wall down).</edomvd>
+                                                						
+                        
+                        <edomvds>OCTO</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>TEMPORARY</edomv>
+                                                						
+                        
+                        <edomvd>Addresses which will exist for a relatively short period of time. Construction trailers, special event tents may be given this TEMPORARY designation.</edomvd>
+                                                						
+                        
+                        <edomvds>OCTO</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>COUNTRY</attrlabl>
+                <attrdef>Always will be UNITED STATES.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>X_COORDINATE</attrlabl>
+                <attrdef>Using Maryland State Plane NAD 1983 meters coordinate system.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>Y_COORDINATE</attrlabl>
+                <attrdef>Using Maryland State Plane NAD 1983 meters coordinate system.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SSL</attrlabl>
+                <attrdef>Address location Square, Suffix, and Lot.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>STREET_TYPE</attrlabl>
+                <attrdef>Address location street type.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>ADDRESS_TYPE</attrlabl>
+                <attrdef>For locations without an address number the value will be 'PLACE' and for locations with an address number the value will be 'ADDRESS'</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>QUADRANT</attrlabl>
+                <attrdef>Address location quadrant name.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>ROUTEID</attrlabl>
+                <attrdef>From DDOT roads &amp; highways.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>BLOCKKEY</attrlabl>
+                <attrdef>From DDOT roads &amp; highways, GUID.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SUBBLOCKKEY</attrlabl>
+                <attrdef>From DDOT roads &amp; highways, GUID.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>CITY</attrlabl>
+                <attrdef>Address location city, always will be WASHINGTON.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>STATE</attrlabl>
+                <attrdef>Address location state name, always will be DC.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>NATIONAL_GRID</attrlabl>
+                <attrdef>National grid coordinates.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>HAS_SSL</attrlabl>
+                <attrdef>Has property information.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>HAS_PLACE_NAME</attrlabl>
+                <attrdef>Has place name.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>HAS_CONDO</attrlabl>
+                <attrdef>Has residential condo unit associated with it.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>HAS_RESIDENTIAL_UNIT</attrlabl>
+                <attrdef>Has residential units associated with it.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>STREET_VIEW_URL</attrlabl>
+                <attrdef>Web URL to Google Maps Street View.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>RESIDENTIAL_TYPE</attrlabl>
+                <attrdef>Residential status.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PLACEMENT</attrlabl>
+                <attrdef>Location of address.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SSL_ALIGNMENT</attrlabl>
+                <attrdef>How well addresses aligns with associated SSL (property).</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>BUILDING</attrlabl>
+                <attrdef>Is associated with a building?</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>WARD</attrlabl>
+                <attrdef>Address location current election ward. This is the only geography that is being stored in the database as it is so widely used. Other geographies are available using the MAR 2.0 web service.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>ZIPCODE</attrlabl>
+                <attrdef>Address location Zip code.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE</attrlabl>
+                <attrdef>Shape geometry.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>MULTIPLE_LAND_SSL</attrlabl>
+                <attrdef>Multiple Land Square, Suffix, Lot.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>GRID_DIRECTION</attrlabl>
+                <attrdef>The grid direction of the address.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>HOUSING_UNIT_COUNT</attrlabl>
+                <attrdef>Number of housing units today.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>RESIDENTIAL_UNIT_COUNT</attrlabl>
+                <attrdef>Number of secondary unit designations today.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>BEFORE_DATE</attrlabl>
+                <attrdef>The address definitely did not exist at this date.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>BEFORE_DATE_SOURCE</attrlabl>
+                <attrdef>The source for before date.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>BEGIN_DATE</attrlabl>
+                <attrdef>The date the address began.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>BEGIN_DATE_SOURCE</attrlabl>
+                <attrdef>The source for the begin date.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>FIRST_KNOWN_DATE</attrlabl>
+                <attrdef>If there is not a known begin date, then there could be the earliest known date.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>FIRST_KNOWN_DATE_SOURCE</attrlabl>
+                <attrdef>The source for the first known date.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>CREATED_DATE</attrlabl>
+                <attrdef>The date the address record was created in the MAR database.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>CREATED_USER</attrlabl>
+                <attrdef>Which agency created the record.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>LAST_EDITED_DATE</attrlabl>
+                <attrdef>When this address records was last edited by someone.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>LAST_EDITED_USER</attrlabl>
+                <attrdef>Which agency last edited the record.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>LATITUDE</attrlabl>
+                <attrdef>Latitude of address (in decimal degrees).</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>LONGITUDE</attrlabl>
+                <attrdef>Longitude of address (in decimal degrees).</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </distrib>
+        <distliab>See access and use constraints information.</distliab>
+        <custom>DC datasets can be downloaded from "https://opendata.dc.gov".</custom>
+    </distinfo>
+    <metainfo>
+        <metd>20230816</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>

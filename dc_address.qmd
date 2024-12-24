@@ -1,0 +1,218 @@
+---
+title: "DC Address Analysis"
+author: "Ian Milko"
+date: last-modified
+format: 
+  html:
+    toc: true 
+    toc-location: right
+    code-fold: true
+    theme: flatly
+    self-contained: true
+---
+
+A project to explore how addresses in Washington D.C. are characterized due to the unique street naming conventions. Several streets in Washington are named after the various U.S. states. Additionally, downtown Washington has a very intuitive and structured grid system, with east-west streets being assigned a letter, and north-south streets assigned a number, both corresponding to how far they are from the Capitol. I have called these Standard Named Streets (SNS).
+
+```{r}
+#| label: setup 
+#| include: false
+
+# Load libraries and settings here
+library(tidyverse)
+library(here)
+library(ggsci)
+library(scales)
+library(cowplot)
+library(janitor)
+library(sf)
+
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>",
+  fig.path = "figs/", # Folder where rendered plots are saved
+  fig.width = 12.9, # Default plot width
+  fig.height = 8, # Default plot height
+  fig.retina = 3 # For better plot resolution
+)
+```
+
+```{r}
+#| label: load
+#| echo: false
+#| include: false
+
+datafile <- read_csv(here('Address_List_Lookup.csv'))
+
+glimpse(datafile)
+
+df <- tibble(datafile)
+head(df)
+
+addrs <- df %>%
+    mutate(st_name_cat = case_when(
+            df$STREET_NAME %in% LETTERS ~ 'Letter',
+            is.na(parse_number(df$STREET_NAME)) == FALSE ~ 'Number',
+            df$STREET_NAME %in% str_to_upper(state.name) ~ 'State',
+            .default = 'Other'
+            ))
+addrs
+
+```
+
+```{r}
+#| label: wards_col
+
+per_ward_col <- addrs %>%
+    clean_names() %>%
+    filter(quadrant != "BN") %>%
+    count(ward) %>%
+    ggplot() +
+        geom_col(
+            aes(x = ward, y = n, fill = ward)
+        ) +
+        scale_fill_viridis_d() +
+        scale_y_continuous(labels = comma) +
+        theme_minimal_hgrid() +
+        labs(
+            x = "Ward",
+            y = "Number of Addresses",
+            title = "Number of Addresses per Ward"
+            ) +
+        theme(legend.position = 'none',
+            panel.border = element_rect(
+                linetype = 'solid',
+                color = 'grey75',
+                linewidth = 2,
+                fill = NA
+            )
+        )
+per_ward_col
+
+```
+
+Note that the plot below is **not** a density plot. It purely shows where the wards are and the total number of addresses. We can see that the smaller Ward 1 has fewer addresses than the larger Ward 5.
+
+```{r}
+#| label: wards_map
+
+ward_data <- addrs %>%
+    clean_names() %>%
+    mutate(ward_name = ward) %>%
+    filter(quadrant != "BN") %>%
+    count(ward_name)
+
+wards <- read_sf('Wards_from_2022/Wards_from_2022.shp') %>%
+    clean_names() %>%
+    mutate(ward_name = name) %>%
+    mutate(area = st_area(.)) %>%
+    left_join(ward_data, by = 'ward_name')
+
+per_ward_map <- ggplot(data = wards) +
+    geom_sf(aes(fill = n), color = 'black', linewidth = 0.6) +
+    geom_sf_label(aes(label = ward_name), size = 4) +
+    scale_fill_viridis_c(begin = 0.2, end = 0.9, option = "D", direction = 1, labels = comma) +
+    expand_limits(fill = seq(0, 24000)) +
+    labs(
+        x = "",
+        y = "",
+        title = "Number of Addresses per Ward",
+        fill = "Number of\nAddresses"
+        ) +
+    theme_bw() +
+    theme(panel.grid.major = element_blank())
+per_ward_map
+
+```
+
+```{r}
+#| label: addrs-plot
+
+addrs_plot <- addrs %>%
+    count(st_name_cat) %>%
+    ggplot() +
+    geom_col(
+        aes(x = reorder(st_name_cat, n, decreasing=TRUE), y = n, fill=st_name_cat),
+    ) +
+    scale_y_continuous(labels = comma) +
+    labs(
+        x = 'Street Name Category',
+        y = 'Number of Addresses',
+        title = 'How many addresses are there on Standard Named Streets?'
+    ) +
+    theme_minimal_hgrid() +
+    theme(legend.position = 'none',
+        panel.border = element_rect(
+            linetype = 'solid',
+            color = 'grey75',
+            linewidth = 2,
+            fill = NA
+        )
+    )
+addrs_plot
+
+```
+
+The plot below illustrates the ratio of SNS addresses to total addresses in a given ward. We can see that Ward 6, which includes Capitol Hill, Southwest Waterfront, and the Union Station/NoMa area north of the Capitol, has a high ratio of SNS addresses due to the grid being largely intact in most of the ward. In comparison, the neighboring Ward 8 has a much lower SNS ratio, due to it being home to southeast DC and Joint Base Anacostia
+
+```{r}
+#| label: ward-sns
+
+ward_addrs <- addrs %>%
+    clean_names() %>%
+    mutate(ward_name = ward) %>%
+    filter(quadrant != "BN")
+
+sns_wards <- ward_addrs %>%
+    filter(st_name_cat != "Other") %>%
+    group_by(ward_name) %>%
+    summarize(sns_addrs = n())
+
+tot_addrs_wards <- ward_addrs %>%
+    group_by(ward_name) %>%
+    summarize(tot_addrs = n())
+
+ward_addrs_stats <- tot_addrs_wards %>%
+    left_join(sns_wards, by = 'ward_name') %>%
+    mutate(sns_ratio = sns_addrs / tot_addrs)
+
+ward_geo <- wards %>%
+    left_join(ward_addrs_stats, by = 'ward_name')
+
+sns_map <- ggplot(data = ward_geo) +
+    geom_sf(aes(fill = sns_ratio), color = 'black', linewidth = 0.6) +
+    geom_sf_label(aes(label = paste0(ward_name, "\n", round(sns_ratio, 2) * 100, "%")), size = 3) +
+    scale_fill_viridis_c(begin = 0.01, end = 0.99, option = "C", direction = 1, labels = label_percent()) +
+    expand_limits(fill = seq(0, 1, by = 0.1)) +
+    labs(
+        x = "",
+        y = "",
+        title = "Ratio of SNS Addresses to Total Addresses",
+        fill = "SNS Ratio"
+        ) +
+    theme_bw() +
+    theme(panel.grid.major = element_blank(),
+        legend.key.height = unit(30, "pt")
+    )
+sns_map
+
+```
+
+```{r}
+#| label: hoods
+#| include: false
+#| eval: false
+
+hoods <- read_sf('DC_Health_Planning_Neighborhoods/DC_Health_Planning_Neighborhoods.shp') %>%
+    clean_names() %>%
+    mutate(dc_hpn_nam = str_to_title(dc_hpn_nam))
+hoods
+
+address_shp <- read_sf('Address_Points/Address_Points.shp')
+glimpse(address_shp)
+
+# joined <- st_join()
+
+```
+    
+
