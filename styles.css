@@ -1,0 +1,11 @@
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.1rem;
+}
+
+p {
+    white-space: normal;
+    /* text-sentence-spacing: double; */
+    word-spacing: 0.15em;
+}

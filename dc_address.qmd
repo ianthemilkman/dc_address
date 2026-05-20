@@ -1,17 +1,22 @@
 ---
 title: "DC Address Analysis"
 author: "Ian Milko"
-date: last-modified
+date: "December 22, 2024"
+date-modified: last-modified
 format: 
   html:
+    css: styles.css
     toc: true 
     toc-location: right
     code-fold: true
     theme: flatly
     self-contained: true
+editor_options: 
+  chunk_output_type: console
 ---
 
-A project to explore how addresses in Washington D.C. are characterized due to the unique street naming conventions. Several streets in Washington are named after the various U.S. states. Additionally, downtown Washington has a very intuitive and structured grid system, with east-west streets being assigned a letter, and north-south streets assigned a number, both corresponding to how far they are from the Capitol. I have called these Standard Named Streets (SNS). We shall see where this goes.
+A project to explore how addresses in Washington D.C. are characterized due to the unique street naming conventions.
+Several streets in Washington are named after the various U.S. states.  Additionally, downtown Washington has a very intuitive and structured grid system, with east-west streets being assigned a letter, and north-south streets assigned a number, both corresponding to how far they are from the Capitol.  I have called these Standard Named Streets (SNS).
 
 ```{r}
 #| label: setup 
@@ -31,8 +36,8 @@ knitr::opts_chunk$set(
   message = FALSE,
   comment = "#>",
   fig.path = "figs/", # Folder where rendered plots are saved
-  fig.width = 12.9, # Default plot width
-  fig.height = 8, # Default plot height
+  # fig.width = 12.9, # Default plot width
+  # fig.height = 8, # Default plot height
   fig.retina = 3 # For better plot resolution
 )
 ```
@@ -62,6 +67,8 @@ addrs
 
 ```{r}
 #| label: wards_col
+#| fig-height: 8
+#| fig-width: 12.9
 
 per_ward_col <- addrs %>%
     clean_names() %>%
@@ -91,10 +98,12 @@ per_ward_col
 
 ```
 
-Note that the plot below is **not** a density plot. It purely shows where the wards are and the total number of addresses. We can see that the smaller Ward 1 has fewer addresses than the larger Ward 5.
+Note that the plot below is **not** a density plot.  It purely shows where the wards are and the total number of addresses.  We can see that the smaller Ward 1 has fewer addresses than the larger Ward 5.
 
 ```{r}
 #| label: wards_map
+#| fig-height: 6
+#| fig-width: 9.675
 
 ward_data <- addrs %>%
     clean_names() %>%
@@ -127,6 +136,8 @@ per_ward_map
 
 ```{r}
 #| label: addrs-plot
+#| fig-height: 8
+#| fig-width: 12.9
 
 addrs_plot <- addrs %>%
     count(st_name_cat) %>%
@@ -153,10 +164,12 @@ addrs_plot
 
 ```
 
-The plot below illustrates the ratio of SNS addresses to total addresses in a given ward. We can see that Ward 6, which includes Capitol Hill, Southwest Waterfront, and the Union Station/NoMa area north of the Capitol, has a high ratio of SNS addresses due to the grid being largely intact in most of the ward. In comparison, the neighboring Ward 8 has a much lower SNS ratio, due to it being home to southeast DC and Joint Base Anacostia
+The plot below illustrates the ratio of SNS addresses to total addresses in a given ward.  We can see that Ward 6, which includes Capitol Hill, Southwest Waterfront, and the Union Station/NoMa area north of the Capitol, has a high ratio of SNS addresses due to the grid being largely intact in most of the ward.  In comparison, the neighboring Ward 8 has a much lower SNS ratio, due to it being home to southeast DC and Joint Base Anacostia.
 
 ```{r}
 #| label: ward-sns
+#| fig-height: 6
+#| fig-width: 9.675
 
 ward_addrs <- addrs %>%
     clean_names() %>%
